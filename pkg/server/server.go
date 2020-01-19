@@ -1,6 +1,7 @@
 package server
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
@@ -8,7 +9,7 @@ import (
 )
 
 // Server - server struct
-type Server struct {}
+type Server struct{}
 
 // Run - runs the server
 func (s *Server) Run() {
@@ -18,10 +19,11 @@ func (s *Server) Run() {
 	})
 
 	httpServer := &http.Server{
-		Addr:    s.config.Port,
+		Addr:    "localhost:3000",
 		Handler: c.Handler(NewRouter(s)),
 	}
 
+	fmt.Println("listening on port 3000")
 	log.Fatal(httpServer.ListenAndServe())
 }
 

@@ -2,8 +2,10 @@ package server
 
 import (
 	"net/http"
-	
+
 	"github.com/gorilla/mux"
+
+	utils "github.com/msg-frontend-go/pkg/utils"
 )
 
 // NewRouter - creates the router for the service

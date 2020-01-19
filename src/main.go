@@ -1,11 +1,9 @@
 package main
 
 import (
-	"fmt"
-
 	"go.uber.org/dig"
 
-	svr "bitbucket/zblizz/jwt-go/pkg/server"
+	svr "github.com/msg-frontend-go/pkg/server"
 )
 
 func buildContainer() *dig.Container {
@@ -18,7 +16,6 @@ func buildContainer() *dig.Container {
 
 func main() {
 	container := buildContainer()
-	utils.LoadProps()
 
 	// TODO: might want to try to use wire for this
 	// REF: https://github.com/google/wire
