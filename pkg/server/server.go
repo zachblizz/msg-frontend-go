@@ -9,7 +9,9 @@ import (
 )
 
 // Server - server struct
-type Server struct{}
+type Server struct {
+	// ... TBD...
+}
 
 // Run - runs the server
 func (s *Server) Run() {
